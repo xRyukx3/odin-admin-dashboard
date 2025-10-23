@@ -128,8 +128,63 @@ body {
       }
     }
     & .main-content {
+      padding: 1.5rem;
       display: grid;
       grid-template-columns: 2.5fr 1fr;
+      & .projects-section {
+        display: grid;
+        grid-template-rows: auto 1fr;
+        & .title {
+          font-weight: 550;
+          font-size: 1.3rem;
+        }
+        & .cards {
+          padding: 1rem 1rem 1rem 0rem;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          align-content: flex-start;
+          gap: 1.5rem;
+          & .card {
+            padding: 2rem 2rem;
+            display: grid;
+            background-color: #fff;
+            box-shadow: inset 30px 2px 0px -20px #f0b429,
+              0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+            border: 0;
+            border-radius: 0.5rem;
+            & .card-content {
+              color: #737373;
+            }
+            & .card-footer {
+              padding-top: 1.5rem;
+              display: flex;
+              justify-self: end;
+              align-self: flex-end;
+              gap: 1.5rem;
+              & .stars,
+              .visualizations,
+              .share {
+                background-color: #fff;
+                border: 0;
+                width: 1.5rem;
+                height: 1.5rem;
+              }
+              & .stars {
+                background-image: url("images/stars-icon.svg");
+              }
+              & .visualizations {
+                background-image: url("images/visualizations-icon.svg");
+              }
+              & .share {
+                background-image: url("images/share-icon.svg");
+              }
+            }
+          }
+        }
+      }
+      & .activity {
+        display: grid;
+      }
     }
   }
 }
